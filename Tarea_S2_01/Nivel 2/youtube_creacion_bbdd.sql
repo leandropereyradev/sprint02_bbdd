@@ -16,9 +16,9 @@ CREATE TABLE usuario(
 CREATE TABLE video(
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
     descripcion TEXT NOT NULL,
-    tamanyo INTEGER NOT NULL,
+    tamanyo DECIMAL(8, 2) NOT NULL,
     nombre_archivo VARCHAR(50) NOT NULL,
-    duracion VARCHAR(10) NOT NULL,
+    duracion INTEGER NOT NULL,
     thumbnail VARCHAR(10) NOT NULL,
     reproducciones INTEGER DEFAULT(0),
     likes INTEGER DEFAULT(0),
