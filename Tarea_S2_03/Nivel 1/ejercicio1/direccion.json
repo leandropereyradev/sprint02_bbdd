@@ -1,0 +1,32 @@
+{
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "direccion",
+      "required": ["calle", "numero", "piso", "puerta", "codigo_postal", "ciudad", "pais"],
+      "properties": {
+        "calle": {
+          "bsonType": "string"
+        },
+        "numero": {
+          "bsonType": "string"
+        },
+        "piso": {
+          "bsonType": "string"
+        },
+        "puerta": {
+          "bsonType": "string"
+        },
+        "codigo_postal": {
+          "bsonType": "string"
+        },
+        "ciudad": {
+          "bsonType": "string"
+        },
+        "pais": {
+          "bsonType": "string"
+        }
+      }
+    }
+  }
+}
