@@ -1,0 +1,27 @@
+{
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "client_view",
+      "required": ["brand", "graduation", "glass_color", "frame_type", "price"],
+      "properties": {
+        "brand": {
+          "bsonType": "objectId"
+        },
+        "graduation": {
+          "bsonType": "objectId"
+        },
+        "glass_color": {
+          "bsonType": "objectId"
+        },
+        "frame_type": {
+          "bsonType": "string",
+          "enum": ["flotante", "metalico", "plastico"]
+        },
+        "price": {
+          "bsonType": "decimal"
+        }
+      }
+    }
+  }
+}

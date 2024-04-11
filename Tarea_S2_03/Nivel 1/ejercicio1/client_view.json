@@ -1,0 +1,17 @@
+{
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "client_view",
+      "required": ["customer", "last_shopping"],
+      "properties": {
+        "customer": {
+          "bsonType": "string"
+        },
+        "last_shopping": {
+          "bsonType": "objectId"
+        }
+      }
+    }
+  }
+}
