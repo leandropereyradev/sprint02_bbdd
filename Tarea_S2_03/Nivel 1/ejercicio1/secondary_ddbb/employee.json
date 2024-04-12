@@ -3,7 +3,15 @@
     "$jsonSchema": {
       "bsonType": "object",
       "title": "employee",
-      "required": ["name", "lastname", "address", "phone", "mail", "store", "registration_date"],
+      "required": [
+        "name",
+        "lastname",
+        "address",
+        "phone",
+        "mail",
+        "store",
+        "registration_date"
+      ],
       "properties": {
         "name": {
           "bsonType": "string"

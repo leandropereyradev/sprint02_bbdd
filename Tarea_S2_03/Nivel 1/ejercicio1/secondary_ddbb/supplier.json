@@ -3,7 +3,13 @@
     "$jsonSchema": {
       "bsonType": "object",
       "title": "supplier",
-      "required": ["name", "address", "phone", "fax", "nif"],
+      "required": [
+        "name",
+        "address",
+        "phone",
+        "fax",
+        "nif"
+      ],
       "properties": {
         "name": {
           "bsonType": "string"

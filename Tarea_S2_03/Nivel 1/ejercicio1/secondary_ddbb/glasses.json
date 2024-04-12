@@ -3,7 +3,14 @@
     "$jsonSchema": {
       "bsonType": "object",
       "title": "glasses",
-      "required": ["brand", "graduation", "frame_type", "frame_color", "glass_color", "price"],
+      "required": [
+        "brand",
+        "graduation",
+        "frame_type",
+        "frame_color",
+        "glass_color",
+        "price"
+      ],
       "properties": {
         "brand": {
           "bsonType": "objectId"
@@ -13,7 +20,11 @@
         },
         "frame_type": {
           "bsonType": "string",
-          "enum": ["flotante", "metalico", "plastico"]
+          "enum": [
+            "float",
+            "metalic",
+            "plastic"
+          ]
         },
         "frame_color": {
           "bsonType": "string"

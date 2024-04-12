@@ -3,7 +3,9 @@
     "$jsonSchema": {
       "bsonType": "object",
       "title": "last_shopping",
-      "required": ["sales"],
+      "required": [
+        "sales"
+      ],
       "properties": {
         "sales": {
           "bsonType": "array",

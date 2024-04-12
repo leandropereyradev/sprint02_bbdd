@@ -3,7 +3,10 @@
     "$jsonSchema": {
       "bsonType": "object",
       "title": "client_view",
-      "required": ["customer", "last_shopping"],
+      "required": [
+        "customer",
+        "last_shopping"
+      ],
       "properties": {
         "customer": {
           "bsonType": "objectId"

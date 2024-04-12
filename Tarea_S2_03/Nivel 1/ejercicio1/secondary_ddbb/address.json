@@ -3,7 +3,15 @@
     "$jsonSchema": {
       "bsonType": "object",
       "title": "address",
-      "required": ["street", "number", "flat", "door", "postal_code", "city", "country"],
+      "required": [
+        "street",
+        "number",
+        "flat",
+        "door",
+        "postal_code",
+        "city",
+        "country"
+      ],
       "properties": {
         "street": {
           "bsonType": "string"

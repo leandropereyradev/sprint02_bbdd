@@ -3,7 +3,10 @@
     "$jsonSchema": {
       "bsonType": "object",
       "title": "brand",
-      "required": ["supplier", "brand"],
+      "required": [
+        "supplier",
+        "brand"
+      ],
       "properties": {
         "supplier": {
           "bsonType": "objectId"
