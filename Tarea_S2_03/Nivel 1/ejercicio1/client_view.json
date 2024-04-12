@@ -6,7 +6,7 @@
       "required": ["customer", "last_shopping"],
       "properties": {
         "customer": {
-          "bsonType": "string"
+          "bsonType": "objectId"
         },
         "last_shopping": {
           "bsonType": "objectId"
