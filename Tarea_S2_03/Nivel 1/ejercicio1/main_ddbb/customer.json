@@ -9,7 +9,6 @@
         "address",
         "phone",
         "mail",
-        "recommended",
         "employee",
         "registration_date"
       ],
@@ -33,12 +32,8 @@
           "unique": true
         },
         "recommended": {
-          "bsonType": [
-            "null",
-            "objectId"
-          ],
-          "ref": "customer",
-          "default": null
+          "bsonType": "objectId",
+          "ref": "customer"
         },
         "employee": {
           "bsonType": "objectId",

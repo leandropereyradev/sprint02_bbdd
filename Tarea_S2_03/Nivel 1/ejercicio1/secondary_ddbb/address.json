@@ -6,8 +6,6 @@
       "required": [
         "street",
         "number",
-        "flat",
-        "door",
         "postal_code",
         "city",
         "country"
@@ -20,12 +18,10 @@
           "bsonType": "string"
         },
         "flat": {
-          "bsonType": "string",
-          "default": null
+          "bsonType": "string"
         },
         "door": {
-          "bsonType": "string",
-          "default": null
+          "bsonType": "string"
         },
         "postal_code": {
           "bsonType": "string"
