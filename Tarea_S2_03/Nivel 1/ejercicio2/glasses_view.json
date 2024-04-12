@@ -1,0 +1,23 @@
+{
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "glasses_view",
+      "required": [
+        "glasses",
+        "bought_by"
+      ],
+      "properties": {
+        "glasses": {
+          "glasses": "objectId"
+        },
+        "bought_by": {
+          "bsonType": "array",
+          "items": {
+            "bsonType": "objectId"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "client_view",
+      "required": [
+        "customer",
+        "glasses"
+      ],
+      "properties": {
+        "customer": {
+          "bsonType": "objectId"
+        },
+        "glasses": {
+          "bsonType": "objectId"
+        }
+      }
+    }
+  }
+}
