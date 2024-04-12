@@ -15,16 +15,19 @@
           "bsonType": "string"
         },
         "address": {
-          "bsonType": "objectId"
+          "bsonType": "objectId",
+          "ref": "address"
         },
         "phone": {
           "bsonType": "string"
         },
         "fax": {
-          "bsonType": "string"
+          "bsonType": "string",
+          "default": null
         },
         "nif": {
-          "bsonType": "string"
+          "bsonType": "string",
+          "unique": true
         }
       }
     }

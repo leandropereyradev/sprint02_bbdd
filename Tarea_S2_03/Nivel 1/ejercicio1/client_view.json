@@ -9,10 +9,12 @@
       ],
       "properties": {
         "customer": {
-          "bsonType": "objectId"
+          "bsonType": "objectId",
+          "ref": "customer"
         },
         "last_shopping": {
-          "bsonType": "objectId"
+          "bsonType": "objectId",
+          "ref": "last_shopping"
         }
       }
     }

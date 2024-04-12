@@ -9,6 +9,7 @@
         "address",
         "phone",
         "mail",
+        "nif",
         "store",
         "registration_date"
       ],
@@ -20,7 +21,8 @@
           "bsonType": "string"
         },
         "address": {
-          "bsonType": "objectId"
+          "bsonType": "objectId",
+          "ref": "address"
         },
         "phone": {
           "bsonType": "string"
@@ -28,8 +30,13 @@
         "mail": {
           "bsonType": "string"
         },
+        "nif": {
+          "bsonType": "string",
+          "unique": true
+        },
         "store": {
-          "bsonType": "objectId"
+          "bsonType": "objectId",
+          "ref": "store"
         },
         "registration_date": {
           "bsonType": "string"

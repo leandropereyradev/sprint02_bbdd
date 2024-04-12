@@ -14,7 +14,8 @@
           "bsonType": "string"
         },
         "address": {
-          "bsonType": "objectId"
+          "bsonType": "objectId",
+          "ref": "address"
         },
         "phone": {
           "bsonType": "string"

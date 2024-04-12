@@ -2,10 +2,11 @@
   "validator": {
     "$jsonSchema": {
       "bsonType": "object",
-      "title": "client_view",
+      "title": "sale",
       "required": [
         "customer",
-        "glasses"
+        "glasses",
+        "sale_date"
       ],
       "properties": {
         "customer": {
@@ -13,6 +14,9 @@
         },
         "glasses": {
           "bsonType": "objectId"
+        },
+        "sale_date": {
+          "bsonType": "date"
         }
       }
     }

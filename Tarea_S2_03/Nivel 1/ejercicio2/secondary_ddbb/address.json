@@ -20,10 +20,12 @@
           "bsonType": "string"
         },
         "flat": {
-          "bsonType": "string"
+          "bsonType": "string",
+          "default": null
         },
         "door": {
-          "bsonType": "string"
+          "bsonType": "string",
+          "default": null
         },
         "postal_code": {
           "bsonType": "string"

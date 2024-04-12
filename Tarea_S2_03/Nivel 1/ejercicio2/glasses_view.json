@@ -9,12 +9,14 @@
       ],
       "properties": {
         "glasses": {
-          "glasses": "objectId"
+          "glasses": "objectId",
+          "ref": "glasses"
         },
         "bought_by": {
           "bsonType": "array",
           "items": {
-            "bsonType": "objectId"
+            "bsonType": "objectId",
+            "ref": "bought_by"
           }
         }
       }

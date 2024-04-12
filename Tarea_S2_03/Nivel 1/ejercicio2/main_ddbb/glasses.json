@@ -13,10 +13,12 @@
       ],
       "properties": {
         "brand": {
-          "bsonType": "objectId"
+          "bsonType": "objectId",
+          "ref": "brand"
         },
         "graduation": {
-          "bsonType": "objectId"
+          "bsonType": "objectId",
+          "ref": "graduation"
         },
         "frame_type": {
           "bsonType": "string",
@@ -30,7 +32,8 @@
           "bsonType": "string"
         },
         "glass_color": {
-          "bsonType": "objectId"
+          "bsonType": "objectId",
+          "ref": "glass_color"
         },
         "price": {
           "bsonType": "decimal"

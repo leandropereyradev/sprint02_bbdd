@@ -9,7 +9,8 @@
       ],
       "properties": {
         "supplier": {
-          "bsonType": "objectId"
+          "bsonType": "objectId",
+          "ref": "supplier"
         },
         "brand": {
           "bsonType": "string"

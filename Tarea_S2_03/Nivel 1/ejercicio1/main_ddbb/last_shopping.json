@@ -10,7 +10,8 @@
         "sales": {
           "bsonType": "array",
           "items": {
-            "bsonType": "objectId"
+            "bsonType": "objectId",
+            "ref": "sale"
           }
         }
       }

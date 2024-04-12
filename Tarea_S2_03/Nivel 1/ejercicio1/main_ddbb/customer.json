@@ -21,19 +21,28 @@
           "bsonType": "string"
         },
         "address": {
-          "bsonType": "objectId"
+          "bsonType": "objectId",
+          "ref": "address"
         },
         "phone": {
-          "bsonType": "string"
+          "bsonType": "string",
+          "unique": true
         },
         "mail": {
-          "bsonType": "string"
+          "bsonType": "string",
+          "unique": true
         },
         "recommended": {
-          "bsonType": "objectId"
+          "bsonType": [
+            "null",
+            "objectId"
+          ],
+          "ref": "customer",
+          "default": null
         },
         "employee": {
-          "bsonType": "objectId"
+          "bsonType": "objectId",
+          "ref": "employee"
         },
         "registration_date": {
           "bsonType": "date"
