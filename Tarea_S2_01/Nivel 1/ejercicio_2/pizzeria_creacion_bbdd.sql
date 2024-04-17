@@ -1,6 +1,22 @@
 DROP SCHEMA IF EXISTS pizzeria;
 CREATE DATABASE pizzeria;
 USE pizzeria;
+-------------------------------
+-- CREACION TABLA PROVINCIA --
+-------------------------------
+CREATE TABLE provincia(
+	id_provincia INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50));
+
+------------------------------
+-- CREACION TABLA LOCALIDAD --
+------------------------------
+CREATE TABLE localidad(
+	id_localidad INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50),
+    id_provincia INTEGER,
+    FOREIGN KEY (id_provincia) REFERENCES provincia(id_provincia)
+    );
 
 -------------------------------
 -- CREACION TABLA DIRECCION --
@@ -12,9 +28,8 @@ CREATE TABLE direccion(
     piso VARCHAR(10),
     puerta VARCHAR(10),
     cp VARCHAR(12),
-    localidad VARCHAR(30),
-    provincia VARCHAR(30),
-    pais VARCHAR(30)
+    id_localidad INTEGER,
+    FOREIGN KEY (id_localidad) REFERENCES localidad(id_localidad)
     );
     
 ----------------------------
@@ -24,9 +39,9 @@ CREATE TABLE cliente(
 	id_cliente INTEGER PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(30),
     apellidos VARCHAR(50),
-    direccion INTEGER,
+    id_direccion INTEGER,
     telefono VARCHAR(16),
-    FOREIGN KEY (direccion) REFERENCES direccion(id_direccion)
+    FOREIGN KEY (id_direccion) REFERENCES direccion(id_direccion)
     );
   
 ------------------------------
@@ -58,8 +73,8 @@ CREATE TABLE tienda(
 	id_tienda INTEGER PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(30),
     telefono VARCHAR(12),
-    direccion INTEGER,
-    FOREIGN KEY (direccion) REFERENCES direccion(id_direccion)
+    id_direccion INTEGER,
+    FOREIGN KEY (id_direccion) REFERENCES direccion(id_direccion)
 	);
 
 -----------------------------
@@ -73,9 +88,9 @@ CREATE TABLE empleado(
     nif VARCHAR(12) UNIQUE,
     telefono VARCHAR(12),
     puesto ENUM('cocinero', 'repartidor'),
-    direccion INTEGER,
+    id_direccion INTEGER,
     FOREIGN KEY (id_tienda) REFERENCES tienda(id_tienda),
-    FOREIGN KEY (direccion) REFERENCES direccion(id_direccion)
+    FOREIGN KEY (id_direccion) REFERENCES direccion(id_direccion)
 	);
 
 ---------------------------

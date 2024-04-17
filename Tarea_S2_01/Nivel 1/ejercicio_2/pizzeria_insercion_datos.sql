@@ -1,38 +1,58 @@
 ------------------------------------
 --  INSERTAR DATOS PARA CONSULTAS --
 ------------------------------------
+-- Insertar provincias de España
+INSERT INTO provincia (nombre) VALUES
+    ('Madrid'),
+    ('Barcelona'),
+    ('Valencia'),
+    ('Sevilla'),
+    ('Alicante');
+
+-- Insertar localidades correspondientes a las provincias
+INSERT INTO localidad (nombre, id_provincia) VALUES
+    -- Madrid
+    ('Madrid', 1), ('Alcalá de Henares', 1), ('Leganés', 1), ('Getafe', 1), ('Alcobendas', 1),
+    -- Barcelona
+    ('Barcelona', 2), ('L''Hospitalet de Llobregat', 2), ('Badalona', 2), ('Terrassa', 2), ('Sabadell', 2),
+    -- Valencia
+    ('Valencia', 3), ('Gandía', 3), ('Torrent', 3), ('Paterna', 3), ('Sagunto', 3),
+    -- Sevilla
+    ('Sevilla', 4), ('Dos Hermanas', 4), ('Alcalá de Guadaíra', 4), ('Mairena del Aljarafe', 4), ('Écija', 4),
+    -- Alicante
+    ('Alicante', 5), ('Elche', 5), ('Benidorm', 5), ('Torrevieja', 5), ('Denia', 5);
 
 -- Insertar dirección
-INSERT INTO direccion (calle, numero, piso, puerta, cp, localidad, provincia, pais) 
+INSERT INTO direccion (calle, numero, piso, puerta, cp, id_localidad) 
 VALUES 
-('Calle Gran Vía', '10', '1', 'A', '28013', 'Madrid', 'Madrid', 'España'),
-('Avenida de la Constitución', '25', '3', 'B', '41001', 'Sevilla', 'Sevilla', 'España'),
-('Calle Mayor', '5', '2', 'C', '50001', 'Zaragoza', 'Zaragoza', 'España'),
-('Plaza del Ayuntamiento', '1', '4', 'D', '46002', 'Valencia', 'Valencia', 'España'),
-('Calle Real', '20', 'Bajo', NULL, '15003', 'A Coruña', 'A Coruña', 'España'),
-('Paseo de Gracia', '123', '1', '2', '08008', 'Barcelona', 'Barcelona', 'España'),
-('Calle Mayor', '10', '1', 'C', '28004', 'Madrid', 'Madrid', 'España'),
-('Avenida Diagonal', '200', '5', 'E', '08018', 'Barcelona', 'Barcelona', 'España'),
-('Calle de la Paz', '15', '2', 'F', '46002', 'Valencia', 'Valencia', 'España'),
-('Calle Real', '30', '2', 'G', '29001', 'Málaga', 'Málaga', 'España'),
-('Calle Ancha', '40', '3', 'H', '41003', 'Sevilla', 'Sevilla', 'España'),
-('Calle Mayor', '50', '4', 'I', '28045', 'Madrid', 'Madrid', 'España'),
-('Avenida Libertad', '60', '5', 'J', '03001', 'Alicante', 'Alicante', 'España'),
-('Calle del Sol', '70', '6', 'K', '47001', 'Valladolid', 'Valladolid', 'España'),
-('Plaza Mayor', '80', '7', 'L', '37002', 'Salamanca', 'Salamanca', 'España'),
-('Calle Estrecha', '90', '8', 'M', '46003', 'Valencia', 'Valencia', 'España'),
-('Avenida del Mar', '100', '9', 'N', '29015', 'Málaga', 'Málaga', 'España'),
-('Calle Real', '110', '10', 'O', '15004', 'A Coruña', 'A Coruña', 'España'),
-('Calle Mayor', '120', '11', 'P', '01001', 'Vitoria', 'Álava', 'España'),
-('Avenida Central', '130', '12', 'Q', '41004', 'Sevilla', 'Sevilla', 'España'),
-('Paseo del Prado', '140', '13', 'R', '28014', 'Madrid', 'Madrid', 'España'),
-('Calle Nueva', '150', '14', 'S', '03002', 'Alicante', 'Alicante', 'España'),
-('Calle San Juan', '160', '15', 'T', '48001', 'Bilbao', 'Vizcaya', 'España'),
-('Calle del Carmen', '170', '16', 'U', '46005', 'Valencia', 'Valencia', 'España'),
-('Avenida de la Libertad', '180', '17', 'V', '46006', 'Valencia', 'Valencia', 'España');
+('Calle Gran Vía', '10', '1', 'A', '28013', 1),
+('Avenida de la Constitución', '25', '3', 'B', '41001', 2),
+('Calle Mayor', '5', '2', 'C', '50001', 3),
+('Plaza del Ayuntamiento', '1', '4', 'D', '46002', 4),
+('Calle Real', '20', 'Bajo', NULL, '15003', 5),
+('Paseo de Gracia', '123', '1', '2', '08008', 6),
+('Calle Mayor', '10', '1', 'C', '28004', 7),
+('Avenida Diagonal', '200', '5', 'E', '08018', 8),
+('Calle de la Paz', '15', '2', 'F', '46002', 9),
+('Calle Real', '30', '2', 'G', '29001', 10),
+('Calle Ancha', '40', '3', 'H', '41003', 11),
+('Calle Mayor', '50', '4', 'I', '28045', 12),
+('Avenida Libertad', '60', '5', 'J', '03001', 13),
+('Calle del Sol', '70', '6', 'K', '47001', 14),
+('Plaza Mayor', '80', '7', 'L', '37002', 15),
+('Calle Estrecha', '90', '8', 'M', '46003', 16),
+('Avenida del Mar', '100', '9', 'N', '29015', 17),
+('Calle Real', '110', '10', 'O', '15004', 18),
+('Calle Mayor', '120', '11', 'P', '01001', 19),
+('Avenida Central', '130', '12', 'Q', '41004', 20),
+('Paseo del Prado', '140', '13', 'R', '28014', 21),
+('Calle Nueva', '150', '14', 'S', '03002', 22),
+('Calle San Juan', '160', '15', 'T', '48001', 23),
+('Calle del Carmen', '170', '16', 'U', '46005', 24),
+('Avenida de la Libertad', '180', '17', 'V', '46006', 25);
 
 -- Insertar tiendas
-INSERT INTO tienda (nombre, telefono, direccion) VALUES
+INSERT INTO tienda (nombre, telefono, id_direccion) VALUES
     ('Pizzería Localidad 1A', '912345678', 1),
     ('Pizzería Localidad 1B', '912345679', 2),
     ('Pizzería Localidad 2A', '912345680', 3),
@@ -45,7 +65,7 @@ INSERT INTO tienda (nombre, telefono, direccion) VALUES
     ('Pizzería Localidad 5B', '912345687', 10);
 
 -- Insertar empleados
-INSERT INTO empleado (id_tienda, nombre, apellidos, nif, telefono, puesto, direccion) VALUES
+INSERT INTO empleado (id_tienda, nombre, apellidos, nif, telefono, puesto, id_direccion) VALUES
     (1, 'Juan', 'González Pérez', '12345678A', '611223344', 'repartidor', 11),
     (1, 'María', 'Rodríguez Martínez', '87654321B', '655443322', 'cocinero', 12),
     (2, 'Pedro', 'Fernández Gómez', '11111111C', '611223344', 'repartidor', 13),
@@ -58,7 +78,7 @@ INSERT INTO empleado (id_tienda, nombre, apellidos, nif, telefono, puesto, direc
     (5, 'Pablo', 'Díaz Martínez', '88888888J', '655443322', 'cocinero', 20);
     
 -- Insertar clientes
-INSERT INTO cliente (nombre, apellidos, telefono, direccion) VALUES
+INSERT INTO cliente (nombre, apellidos, telefono, id_direccion) VALUES
     ('Juan', 'Pérez Gómez', '912345678', 21),
     ('María', 'García López', '912345679', 22),
     ('Pedro', 'Martínez Rodríguez', '912345680', 23),
