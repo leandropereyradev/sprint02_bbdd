@@ -1,60 +1,69 @@
 ------------------------------------
 --  INSERTAR DATOS PARA CONSULTAS --
 ------------------------------------
--- Insertar provincias
-INSERT INTO provincia (nombre) VALUES
-    ('Provincia 1'),
-    ('Provincia 2'),
-    ('Provincia 3'),
-    ('Provincia 4'),
-    ('Provincia 5');
 
--- Insertar localidades
-INSERT INTO localidad (nombre, id_provincia) VALUES
-    ('Localidad 1A', 1),
-    ('Localidad 1B', 1),
-    ('Localidad 2A', 2),
-    ('Localidad 2B', 2),
-    ('Localidad 3A', 3),
-    ('Localidad 3B', 3),
-    ('Localidad 4A', 4),
-    ('Localidad 4B', 4),
-    ('Localidad 5A', 5),
-    ('Localidad 5B', 5);
+-- Insertar dirección
+INSERT INTO direccion (calle, numero, piso, puerta, cp, localidad, provincia, pais) 
+VALUES 
+('Calle Gran Vía', '10', '1', 'A', '28013', 'Madrid', 'Madrid', 'España'),
+('Avenida de la Constitución', '25', '3', 'B', '41001', 'Sevilla', 'Sevilla', 'España'),
+('Calle Mayor', '5', '2', 'C', '50001', 'Zaragoza', 'Zaragoza', 'España'),
+('Plaza del Ayuntamiento', '1', '4', 'D', '46002', 'Valencia', 'Valencia', 'España'),
+('Calle Real', '20', 'Bajo', NULL, '15003', 'A Coruña', 'A Coruña', 'España'),
+('Paseo de Gracia', '123', '1', '2', '08008', 'Barcelona', 'Barcelona', 'España'),
+('Calle Mayor', '10', '1', 'C', '28004', 'Madrid', 'Madrid', 'España'),
+('Avenida Diagonal', '200', '5', 'E', '08018', 'Barcelona', 'Barcelona', 'España'),
+('Calle de la Paz', '15', '2', 'F', '46002', 'Valencia', 'Valencia', 'España'),
+('Calle Real', '30', '2', 'G', '29001', 'Málaga', 'Málaga', 'España'),
+('Calle Ancha', '40', '3', 'H', '41003', 'Sevilla', 'Sevilla', 'España'),
+('Calle Mayor', '50', '4', 'I', '28045', 'Madrid', 'Madrid', 'España'),
+('Avenida Libertad', '60', '5', 'J', '03001', 'Alicante', 'Alicante', 'España'),
+('Calle del Sol', '70', '6', 'K', '47001', 'Valladolid', 'Valladolid', 'España'),
+('Plaza Mayor', '80', '7', 'L', '37002', 'Salamanca', 'Salamanca', 'España'),
+('Calle Estrecha', '90', '8', 'M', '46003', 'Valencia', 'Valencia', 'España'),
+('Avenida del Mar', '100', '9', 'N', '29015', 'Málaga', 'Málaga', 'España'),
+('Calle Real', '110', '10', 'O', '15004', 'A Coruña', 'A Coruña', 'España'),
+('Calle Mayor', '120', '11', 'P', '01001', 'Vitoria', 'Álava', 'España'),
+('Avenida Central', '130', '12', 'Q', '41004', 'Sevilla', 'Sevilla', 'España'),
+('Paseo del Prado', '140', '13', 'R', '28014', 'Madrid', 'Madrid', 'España'),
+('Calle Nueva', '150', '14', 'S', '03002', 'Alicante', 'Alicante', 'España'),
+('Calle San Juan', '160', '15', 'T', '48001', 'Bilbao', 'Vizcaya', 'España'),
+('Calle del Carmen', '170', '16', 'U', '46005', 'Valencia', 'Valencia', 'España'),
+('Avenida de la Libertad', '180', '17', 'V', '46006', 'Valencia', 'Valencia', 'España');
 
 -- Insertar tiendas
-INSERT INTO tienda (nombre, telefono, direccion, codigo_postal, id_localidad, id_provincia) VALUES
-    ('Pizzería Localidad 1A', '912345678', 'Calle Principal 1', '28001', 1, 1),
-    ('Pizzería Localidad 1B', '912345679', 'Avenida Central 2', '28002', 2, 1),
-    ('Pizzería Localidad 2A', '912345680', 'Plaza Mayor 3', '28003', 3, 2),
-    ('Pizzería Localidad 2B', '912345681', 'Calle Gran Vía 4', '28004', 4, 2),
-    ('Pizzería Localidad 3A', '912345682', 'Avenida del Mar 5', '28005', 5, 3),
-    ('Pizzería Localidad 3B', '912345683', 'Calle Mayor 6', '28006', 6, 3),
-    ('Pizzería Localidad 4A', '912345684', 'Calle San Juan 7', '28007', 7, 4),
-    ('Pizzería Localidad 4B', '912345685', 'Paseo de la Reina 8', '28008', 8, 4),
-    ('Pizzería Localidad 5A', '912345686', 'Calle Mayor 9', '28009', 9, 5),
-    ('Pizzería Localidad 5B', '912345687', 'Avenida de la Paz 10', '28010', 10, 5);
+INSERT INTO tienda (nombre, telefono, direccion) VALUES
+    ('Pizzería Localidad 1A', '912345678', 1),
+    ('Pizzería Localidad 1B', '912345679', 2),
+    ('Pizzería Localidad 2A', '912345680', 3),
+    ('Pizzería Localidad 2B', '912345681', 4),
+    ('Pizzería Localidad 3A', '912345682', 5),
+    ('Pizzería Localidad 3B', '912345683', 6),
+    ('Pizzería Localidad 4A', '912345684', 7),
+    ('Pizzería Localidad 4B', '912345685', 8),
+    ('Pizzería Localidad 5A', '912345686', 9),
+    ('Pizzería Localidad 5B', '912345687', 10);
 
 -- Insertar empleados
-INSERT INTO empleado (id_tienda, nombre, apellidos, nif, telefono, puesto) VALUES
-    (1, 'Juan', 'González Pérez', '12345678A', '611223344', 'repartidor'),
-    (1, 'María', 'Rodríguez Martínez', '87654321B', '655443322', 'cocinero'),
-    (2, 'Pedro', 'Fernández Gómez', '11111111C', '611223344', 'repartidor'),
-    (2, 'Laura', 'Sánchez López', '22222222D', '655443322', 'cocinero'),
-    (3, 'Ana', 'Pérez García', '33333333E', '611223344', 'repartidor'),
-    (3, 'David', 'López Martínez', '44444444F', '655443322', 'cocinero'),
-    (4, 'Sara', 'Martínez Pérez', '55555555G', '611223344', 'repartidor'),
-    (4, 'Carlos', 'Gómez Rodríguez', '66666666H', '655443322', 'cocinero'),
-    (5, 'Lucía', 'Hernández López', '77777777I', '611223344', 'repartidor'),
-    (5, 'Pablo', 'Díaz Martínez', '88888888J', '655443322', 'cocinero');
+INSERT INTO empleado (id_tienda, nombre, apellidos, nif, telefono, puesto, direccion) VALUES
+    (1, 'Juan', 'González Pérez', '12345678A', '611223344', 'repartidor', 11),
+    (1, 'María', 'Rodríguez Martínez', '87654321B', '655443322', 'cocinero', 12),
+    (2, 'Pedro', 'Fernández Gómez', '11111111C', '611223344', 'repartidor', 13),
+    (2, 'Laura', 'Sánchez López', '22222222D', '655443322', 'cocinero', 14),
+    (3, 'Ana', 'Pérez García', '33333333E', '611223344', 'repartidor', 15),
+    (3, 'David', 'López Martínez', '44444444F', '655443322', 'cocinero', 16),
+    (4, 'Sara', 'Martínez Pérez', '55555555G', '611223344', 'repartidor', 17),
+    (4, 'Carlos', 'Gómez Rodríguez', '66666666H', '655443322', 'cocinero', 18),
+    (5, 'Lucía', 'Hernández López', '77777777I', '611223344', 'repartidor', 19),
+    (5, 'Pablo', 'Díaz Martínez', '88888888J', '655443322', 'cocinero', 20);
     
 -- Insertar clientes
-INSERT INTO cliente (nombre, apellidos, direccion, codigo_postal, telefono, id_localidad, id_provincia) VALUES
-    ('Juan', 'Pérez Gómez', 'Calle Principal 123', '28001', '912345678', 1, 1),
-    ('María', 'García López', 'Avenida Central 456', '28002', '912345679', 2, 2),
-    ('Pedro', 'Martínez Rodríguez', 'Plaza Mayor 789', '28003', '912345680', 3, 3),
-    ('Ana', 'Fernández Sánchez', 'Calle Gran Vía 100', '28004', '912345681', 4, 4),
-    ('Laura', 'Fernández Sánchez', 'Calle Gran Vía 100', '28004', '912345681', 5, 5);
+INSERT INTO cliente (nombre, apellidos, telefono, direccion) VALUES
+    ('Juan', 'Pérez Gómez', '912345678', 21),
+    ('María', 'García López', '912345679', 22),
+    ('Pedro', 'Martínez Rodríguez', '912345680', 23),
+    ('Ana', 'Fernández Sánchez', '912345681', 24),
+    ('Laura', 'Fernández Sánchez', '912345681', 25);
     
 -- Insertart categorías
 INSERT INTO categoria (nombre) VALUES

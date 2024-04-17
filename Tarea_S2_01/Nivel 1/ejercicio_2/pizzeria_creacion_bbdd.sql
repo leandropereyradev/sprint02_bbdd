@@ -3,20 +3,18 @@ CREATE DATABASE pizzeria;
 USE pizzeria;
 
 -------------------------------
--- CREACION TABLA PROVINCIA --
+-- CREACION TABLA DIRECCION --
 -------------------------------
-CREATE TABLE provincia(
-	id_provincia INTEGER PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(50));
-
-------------------------------
--- CREACION TABLA LOCALIDAD --
-------------------------------
-CREATE TABLE localidad(
-	id_localidad INTEGER PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(50),
-    id_provincia INTEGER,
-    FOREIGN KEY (id_provincia) REFERENCES provincia(id_provincia)
+CREATE TABLE direccion(
+	id_direccion INTEGER PRIMARY KEY AUTO_INCREMENT,
+    calle VARCHAR(50),
+    numero VARCHAR(20),
+    piso VARCHAR(10),
+    puerta VARCHAR(10),
+    cp VARCHAR(12),
+    localidad VARCHAR(30),
+    provincia VARCHAR(30),
+    pais VARCHAR(30)
     );
     
 ----------------------------
@@ -26,13 +24,9 @@ CREATE TABLE cliente(
 	id_cliente INTEGER PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(30),
     apellidos VARCHAR(50),
-    direccion VARCHAR(100),
-    codigo_postal VARCHAR(20),
-    telefono VARCHAR(12),
-    id_localidad INTEGER,
-    id_provincia INTEGER,
-    FOREIGN KEY (id_localidad) REFERENCES localidad(id_localidad),
-    FOREIGN KEY (id_provincia) REFERENCES provincia(id_provincia)
+    direccion INTEGER,
+    telefono VARCHAR(16),
+    FOREIGN KEY (direccion) REFERENCES direccion(id_direccion)
     );
   
 ------------------------------
@@ -64,12 +58,8 @@ CREATE TABLE tienda(
 	id_tienda INTEGER PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(30),
     telefono VARCHAR(12),
-    direccion VARCHAR(100),
-    codigo_postal VARCHAR(20),
-    id_localidad INTEGER,
-    id_provincia INTEGER,
-    FOREIGN KEY (id_localidad) REFERENCES localidad(id_localidad),
-    FOREIGN KEY (id_provincia) REFERENCES provincia(id_provincia)
+    direccion INTEGER,
+    FOREIGN KEY (direccion) REFERENCES direccion(id_direccion)
 	);
 
 -----------------------------
@@ -83,7 +73,9 @@ CREATE TABLE empleado(
     nif VARCHAR(12) UNIQUE,
     telefono VARCHAR(12),
     puesto ENUM('cocinero', 'repartidor'),
-    FOREIGN KEY (id_tienda) REFERENCES tienda(id_tienda)
+    direccion INTEGER,
+    FOREIGN KEY (id_tienda) REFERENCES tienda(id_tienda),
+    FOREIGN KEY (direccion) REFERENCES direccion(id_direccion)
 	);
 
 ---------------------------

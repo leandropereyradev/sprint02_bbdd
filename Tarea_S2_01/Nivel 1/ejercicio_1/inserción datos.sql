@@ -41,11 +41,11 @@ VALUES
     ('Ana Martínez', 4, '6555-5678', '39029384G');
 
 -- Insertar clientes
-INSERT INTO cliente (nombre, id_direccion, telefono, correo_electronico, fecha_registro, id_cliente_recomendado, id_empleado)
+INSERT INTO cliente (nombre, id_direccion, telefono, correo_electronico, fecha_registro, id_cliente_recomendado)
 VALUES
-    ('Juan Pérez', 5, '6555-1234', 'juan@example.com', '2021-07-02', NULL, 1),
-    ('María García', 6, '6555-5678', 'maria@example.com', '2023-03-21', 1, 2),
-    ('Pedro López', 7, '6555-91011', 'pedro@example.com', '2020-10-12', NULL, 1);
+    ('Juan Pérez', 5, '6555-1234', 'juan@example.com', '2021-07-02', NULL),
+    ('María García', 6, '6555-5678', 'maria@example.com', '2023-03-21', 1),
+    ('Pedro López', 7, '6555-91011', 'pedro@example.com', '2020-10-12', NULL);
 
 -- Insertar ventas    
 INSERT INTO venta (id_empleado, id_cliente, id_gafas, importe, fecha_registro)

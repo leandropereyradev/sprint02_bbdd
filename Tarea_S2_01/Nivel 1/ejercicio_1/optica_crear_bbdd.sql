@@ -71,14 +71,12 @@ CREATE TABLE empleado(
 ----------------------------
 CREATE TABLE cliente(
     id_cliente INTEGER PRIMARY KEY AUTO_INCREMENT,
-    id_empleado INTEGER,
     id_cliente_recomendado INTEGER,
     id_direccion INTEGER,
     nombre VARCHAR(50),
     telefono CHAR(10),
     correo_electronico VARCHAR(50),
     fecha_registro TIMESTAMP,
-    FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado),
     FOREIGN KEY (id_cliente_recomendado) REFERENCES cliente(id_cliente),
     FOREIGN KEY (id_direccion) REFERENCES direccion(id_direccion)
 );
